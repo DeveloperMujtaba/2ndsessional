@@ -52,3 +52,22 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 
 }
+class _MyHomePageState extends State<MyHomePage> {
+
+
+  var imageArray = [
+
+    'dice-png1.png',
+
+    'dice-png2.png',
+
+    'dice-png3.png',
+
+    'dice-png4.png',
+
+    'dice-png5.png',
+
+    'dice-png6.png'
+
+  ];
+}
