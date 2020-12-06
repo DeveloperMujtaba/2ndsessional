@@ -49,3 +49,45 @@ class _HomeScreenState extends State<HomeScreen>
     _controller.dispose();
 
   }
+  animate(){
+
+    _controller =
+
+        AnimationController(duration: Duration(seconds: 1), vsync: this);
+
+    animation= CurvedAnimation(parent: _controller,curve: Curves.bounceOut);
+
+    animation.addListener(() {
+
+      setState(() {
+
+
+
+      });
+
+      // print(_controller.value);
+
+    });
+
+    animation.addStatusListener((status) {
+
+      if (status == AnimationStatus.completed) {
+
+        setState(() {
+
+          leftDiceNumber = Random().nextInt(6) + 1;
+
+          rightDiceNumber = Random().nextInt(6) + 1;
+
+        });
+
+        // print('Completed');
+
+        _controller.reverse();
+
+      }
+
+    });
+
+  }
+
