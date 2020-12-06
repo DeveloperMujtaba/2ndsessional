@@ -4,6 +4,9 @@ import 'package:sp17_bcs_077/homescreen.dart';
 
 import 'package:sp17_bcs_077/splash.dart';
 
+import 'common.dart';
+
+import 'game.dart';
 void main() {
 
   runApp(MyApp());
