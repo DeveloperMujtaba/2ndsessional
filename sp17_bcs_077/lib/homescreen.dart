@@ -91,3 +91,114 @@ class _HomeScreenState extends State<HomeScreen>
 
   }
 
+  void roll() {
+
+    _controller.forward();
+
+
+
+  }
+
+
+
+  @override
+
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+
+      appBar: AppBar(
+
+        title: Text('Dicee'),
+
+      ),
+
+      body: Center(
+
+        child: Column(
+
+          mainAxisAlignment: MainAxisAlignment.center,
+
+          children: [
+
+            Row(
+
+              children: [
+
+                Expanded(
+
+                  child: GestureDetector(
+
+                    onDoubleTap: roll,
+
+                    child: Padding(
+
+                      padding: EdgeInsets.all(15),
+
+                      child: Image(height:200- (animation.value)*200,
+
+                        image: AssetImage(
+
+                            'assets/images/dice-png-$leftDiceNumber.png'),
+
+                      ),
+
+                    ),
+
+                  ),
+
+                ),
+
+                Expanded(
+
+                  child: GestureDetector(
+
+                    onDoubleTap: roll,
+
+                    child: Padding(
+
+                      padding: EdgeInsets.all(15),
+
+                      child: Image(height:200- (animation.value)*200,
+
+                        image: AssetImage(
+
+                            'assets/images/dice-png-$rightDiceNumber.png'),
+
+                      ),
+
+                    ),
+
+                  ),
+
+                )
+
+              ],
+
+            ),
+
+            RaisedButton(
+
+              onPressed: roll,
+
+              child: Text(
+
+                'Roll',
+
+                style: TextStyle(fontWeight: FontWeight.bold),
+
+              ),
+
+            )
+
+          ],
+
+        ),
+
+      ),
+
+    );
+
+  }
+
+}
